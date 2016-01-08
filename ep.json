@@ -20,6 +20,7 @@
         "aceAttribClasses":"ep_font_family/index",
         "stylesForExport" : "ep_font_family/index",
         "exportHtmlAdditionalTags" : "ep_font_family/index",
+        "getLineHTMLForExport" : "ep_font_family/index",
         "asyncLineHTMLForExport": "ep_font_family/index"
       }
     }

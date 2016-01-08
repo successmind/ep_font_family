@@ -1,5 +1,5 @@
 var eejs = require('ep_etherpad-lite/node/eejs/');
-var fonts = ["fontarial", "fonttimes-new-roman", "fontcalibri", "fonthelvetica", "fontcourier", "fontpalatino", "fontgaramond", "fontbookman", "fontavant-garde"];
+var fonts = ["fontubuntumono", "fontkottaone", "fontubuntu"];
 var fs = require('fs');
 
 /******************** 
@@ -45,9 +45,22 @@ exports.exportHtmlAdditionalTags = function(hook, pad, cb){
   cb(fonts);
 };
 
+exports.getLineHTMLForExport = function (hook, context) {
+  var lineContent = context.lineContent;
+  if (lineContent.indexOf('<font') != -1) {
+    fonts.forEach(function (font) {
+      font = font.replace("font", "");
+      lineContent = lineContent.replace("<font" + font, "<span style='font-family:" + font + "'");
+      lineContent = lineContent.replace("</font" + font, "</span");
+    });
+    if (lineContent.slice(-4) != '<br>')
+      lineContent = lineContent + '<br>';
+    context.lineContent = lineContent;
+  }
+}
 
 exports.asyncLineHTMLForExport = function (hook, context, cb) {
-  cb(rewriteLine);
+  //cb(rewriteLine);
 }
 
 function rewriteLine(context){

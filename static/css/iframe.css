@@ -1,30 +1,12 @@
-fontarial{
-  font-family:arial;
+fontubuntumono {
+  font-family: Ubuntumono, monospace;
 }
-fonttimes-new-roman{
-  font-family:times new roman;
+fontkottaone {
+  font-family: Kottaone, serif;
 }
-fontcalibri{
-  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+fontubuntu {
+  font-family: Ubuntu, sans-serif;
 }
-fonthelvetica{
-  font-family:helvetica;
-}
-fontcourier{
-  font-family:courier;
-}
-fontpalatino{
-  font-family:palatino;
-}
-fontgaramond{
-  font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif; 
-}
-fontbookman{
-  font-family:bookman, Bookman Old Style;
-}
-fontavant-garde{
-  font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-}
-*{
-  font-family:inherit
+* {
+  font-family:inherit;
 }
